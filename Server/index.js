@@ -1,11 +1,11 @@
-const express=require('express');
-const router =express.Router();
+require('dotenv').config();
+const mongoose = require("mongoose");
 
-const dotenv=require('dotenv');
-dotenv.config();
-const app=express();
-const PORT = 4100;
+const app=require("./src/app");
+
+const PORT =process.env.PORT ||5000;
+
 
 app.listen(PORT,()=>{
-    console.log(`Server on port ${PORT} `);
+    console.log(`Server is ready for connection on port ${PORT} `);
 })
